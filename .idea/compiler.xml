@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="CSVReaderAndWriter" />
+        <module name="Enumeration" />
+        <module name="Inheritance" />
+        <module name="ExceptionHandling" />
+        <module name="FileReaderAndWriter" />
+        <module name="BufferedReaderAndWriter" />
+        <module name="Interfaces" />
+        <module name="Abstract_Class" />
+        <module name="Singleton" />
+        <module name="Sets" />
+        <module name="LinkedLists" />
+        <module name="Database" />
+        <module name="Static" />
+        <module name="Map" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="JavaVelocity" target="7" />
+      <module name="Jdbc" target="7" />
+      <module name="untitled" target="7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
