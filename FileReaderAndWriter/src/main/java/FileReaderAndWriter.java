@@ -14,28 +14,32 @@ public class FileReaderAndWriter {
         System.out.println("Enter Message : ");
         String message = scan.nextLine();
 
-        // attach a file to FileWriter
+        FileWriter fw=null;
         try{
-            FileWriter fw=new FileWriter("file.txt");
-            // read character wise from string and write into FileWriter
+            fw = new FileWriter("file.txt");
             for (int i = 0; i < message.length(); i++)
                 fw.write(message.charAt(i));
             System.out.println("Writing successful");
-            //close the file
-            fw.close();
+
         }
         catch(IOException e)
         {
             System.out.println(e);
         }
+        finally {
+            if(fw != null){
+                try {
+                    fw.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 
     public void read() throws IOException
     {
-        // variable declaration
         int ch;
-
-        // check if File exists or not
         FileReader fr=null;
         try
         {
@@ -45,15 +49,14 @@ public class FileReaderAndWriter {
         {
             System.out.println("File not found");
         }
-
-        // read from FileReader till the end of file
+        finally {
+            if( fr != null){
+                fr.close();
+            }
+        }
         while ((ch=fr.read())!=-1)
             System.out.print((char)ch);
-
-        // close the file
-        fr.close();
     }
-
 }
 
 

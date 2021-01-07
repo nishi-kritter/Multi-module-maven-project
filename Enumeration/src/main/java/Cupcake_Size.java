@@ -4,9 +4,9 @@ enum Cupcake {
     Chocolate(100,"Royal Chocolate",10),
     Strawberry(200,"Fruity Strawberry",15),
     Vanilla(150,"White Vanilla",5);
-    public float price;
-    public String name;
-    public int quantity;
+    private float price;
+    private String name;
+    private int quantity;
 
     Cupcake(int price, String name, int quantity) {
         this.price = price;
@@ -67,7 +67,7 @@ class Shop{
                     break;
                 case 2:
                     Cupcake c =  Cupcake.Chocolate;
-                    System.out.println("Chocolate Cupcake's Name - "+c.getName()+" Price - "+c.price+" Quantity - "+c.getQuantity());
+                    System.out.println("Chocolate Cupcake's Name - "+c.getName()+" Price - "+c.getPrice()+" Quantity - "+c.getQuantity());
                     break;
                 case 3:
                     System.out.println("Cupcake Size S's value:"+Cupcake.valueOf("Strawberry"));

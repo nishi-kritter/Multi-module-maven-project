@@ -17,10 +17,12 @@
         <module name="Abstract_Class" />
         <module name="Singleton" />
         <module name="Sets" />
+        <module name="JsonObjectMapping" />
         <module name="LinkedLists" />
         <module name="Database" />
         <module name="Static" />
         <module name="Map" />
+        <module name="ArraysAndArrayLists" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

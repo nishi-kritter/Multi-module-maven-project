@@ -3,7 +3,6 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>com.kritter</groupId>
     <artifactId>Multi_Module_Maven_Java</artifactId>
     <packaging>pom</packaging>
@@ -23,6 +22,8 @@
         <module>Map</module>
         <module>Interfaces</module>
         <module>CSVReaderAndWriter</module>
+        <module>ArraysAndArrayLists</module>
+        <module>JsonObjectMapping</module>
     </modules>
     <dependencies>
         <dependency>
@@ -112,6 +113,18 @@
         <dependency>
             <groupId>com.kritter</groupId>
             <artifactId>CSVReaderAndWriter</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.kritter</groupId>
+            <artifactId>ArraysAndArrayLists</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.kritter</groupId>
+            <artifactId>JsonObjectMapping</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>

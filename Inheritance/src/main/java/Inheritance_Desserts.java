@@ -44,7 +44,7 @@ class Inheritance_Cupcake extends Inheritance_Desserts
         this.size = size;
     }
 
-
+    @Override
     public void base_price() {
         super.base_price();
     }

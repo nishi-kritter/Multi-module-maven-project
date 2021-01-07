@@ -35,28 +35,37 @@ public class CSVReaderWriter {
     public void write_in_csv()
     {
         File file = new File("file.csv");
+        CSVWriter writer=null;
         try {
 
-            FileWriter outputfile = new FileWriter(file);
-            CSVWriter writer = new CSVWriter(outputfile);
+            writer = new CSVWriter(new FileWriter(file));
             String[] header = { "Name", "Flavour", "Price" };
             writer.writeNext(header);
             String[] data1 = { "Choco Chips Cake", "Chocolate", "550" };
             writer.writeNext(data1);
             String[] data2 = { "Chocolate Fudge", "Chocolate", "300" };
             writer.writeNext(data2);
-            writer.close();
+
         }
         catch (IOException e) {
             System.out.println(e);
+        }
+        finally {
+            if(writer != null){
+                try {
+                    writer.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 
     public void read_from_csv()
     {
+        CSVReader csvReader=null;
         try {
-            FileReader filereader = new FileReader("file.csv");
-            CSVReader csvReader = new CSVReader(filereader);
+            csvReader = new CSVReader( new FileReader("file.csv"));
             String[] nextRecord;
             while ((nextRecord = csvReader.readNext()) != null) {
                 for (String cell : nextRecord) {
@@ -67,6 +76,15 @@ public class CSVReaderWriter {
         }
         catch (Exception e) {
             System.out.println(e);
+        }
+        finally {
+            if(csvReader != null){
+                try {
+                    csvReader.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 }

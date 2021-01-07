@@ -1,8 +1,5 @@
 import java.io.IOException;
 import java.util.Scanner;
-import java.sql.*;
-
-
 
 public class Menu {
     public static void main(String[] args) throws IOException {
@@ -25,7 +22,9 @@ public class Menu {
             System.out.println("12. Map");
             System.out.println("13. Interface");
             System.out.println("14. CSV Reader and Writer");
-            System.out.println("15. EXIT");
+            System.out.println("15. Arrays and ArrayLists");
+            System.out.println("16. Json Object Mapping");
+            System.out.println("17. EXIT");
             System.out.println("*******************************************************");
             System.out.println("Enter Choice :");
             choice = scan.nextInt();
@@ -89,7 +88,8 @@ public class Menu {
                     break;
                 case 9:
                     BufferedReaderAndWriter brw = new BufferedReaderAndWriter();
-                    brw.display();
+                    brw.writer();
+                    brw.reader();
                     break;
                 case 10:
                     FileReaderAndWriter frw = new FileReaderAndWriter();
@@ -112,7 +112,15 @@ public class Menu {
                     CSVReaderWriter csv = new  CSVReaderWriter();
                     csv.operations();
                     break;
+                case 15:
+                    ArraysAndArrayList arraysAndArrayList = new ArraysAndArrayList();
+                    arraysAndArrayList.operations();
+                    break;
+                case 16:
+                    JsonObjectMapping jsonObjectMapping = new JsonObjectMapping();
+                    jsonObjectMapping.operations();
+                    break;
             }
-        }while(choice != 15);
+        }while(choice != 17);
     }
 }
