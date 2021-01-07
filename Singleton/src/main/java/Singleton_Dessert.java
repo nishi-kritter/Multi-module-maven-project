@@ -23,7 +23,6 @@ public class Singleton_Dessert {
 
 }
 
-
 class Singletonshop{
     public void operations()
     {

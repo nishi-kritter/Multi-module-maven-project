@@ -14,5 +14,7 @@ class Square extends Shape {
     void area(){
         a = l * l;
         System.out.println("Area of Square is "+a);
+
     }
+
 }

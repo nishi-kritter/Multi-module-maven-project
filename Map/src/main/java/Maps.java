@@ -87,8 +87,6 @@ public class Maps {
                         Map.Entry mapElement = (Map.Entry) i.next();
                         System.out.println("\n"+mapElement.getKey() +" => "+mapElement.getValue());
                     }
-
-
                     System.out.println("Map : --> Using forEach\n");
                     m.forEach((k,v)->System.out.println(k+" -> "+v));
                     break;
